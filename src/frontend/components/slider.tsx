@@ -4,7 +4,6 @@ import * as proto from '../../shared/proto';
 import * as util from '../util/util';
 import {play} from '../audio';
 
-import {KEYS} from '../util/keys';
 import {styled, buttonStateNormal, buttonStateNormalHover} from './styling';
 
 const CLASS_STATE_OPEN = 'open';

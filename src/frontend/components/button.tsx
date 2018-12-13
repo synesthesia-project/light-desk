@@ -31,7 +31,7 @@ class Button extends React.Component<Props, State> {
   }
 
   public render() {
-    let className = this.props.className ? this.props.className : '';
+    const className = this.props.className ? this.props.className : '';
     return (
       <div
         className={className + (this.state.touching ? ' touching' : '')}
@@ -54,7 +54,7 @@ class Button extends React.Component<Props, State> {
     });
   }
 
-  private onClick(event: React.MouseEvent<HTMLDivElement>) {
+  private onClick(_: React.MouseEvent<HTMLDivElement>) {
     this.click();
   }
 
