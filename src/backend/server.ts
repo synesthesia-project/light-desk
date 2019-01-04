@@ -4,14 +4,24 @@ import * as path from 'path';
 import * as WebSocket from 'ws';
 
 import * as proto from '../shared/proto';
+import {AudioFile, AUDIO_FILES} from '../shared/static';
 
 const STATIC_DIR = path.resolve(__dirname, '../frontend');
-const AUDIO_DIR = path.resolve(STATIC_DIR, 'audio/freesound');
 
 const STATIC_FILES: {[id: string]: [string, string]} = {
   '/bundle.js': ['bundle.js', 'text/javascript'],
   '/bundle.js.map': ['bundle.js.map', 'text/plain']
 };
+
+// Add audio files to STATIC_FILES
+for (const key of Object.keys(AUDIO_FILES)) {
+  const audioFile: AudioFile = AUDIO_FILES[key];
+  const contentType =
+    audioFile.file.endsWith('.wav') ? 'audio/wav' :
+    audioFile.file.endsWith('.ogg') ? 'audio/ogg' :
+    'application/octet-stream';
+  STATIC_FILES[`/audio/${audioFile.file}`] = [`audio/${audioFile.file}`, contentType];
+}
 
 export interface Connection {
   sendMessage(msg: proto.ServerMessage): void;
@@ -57,15 +67,6 @@ export class Server {
         const f = STATIC_FILES[request.url];
         if (f) {
           this.sendStaticFile(path.join(STATIC_DIR, f[0]), response, f[1]);
-          return;
-        }
-        const staticPath = path.normalize(path.join(STATIC_DIR, request.url.substr(1)));
-        if (staticPath.startsWith(AUDIO_DIR)) {
-          const contentType =
-            staticPath.endsWith('.wav') ? 'audio/wav' :
-            staticPath.endsWith('.ogg') ? 'audio/ogg' :
-            'application/octet-stream';
-          this.sendStaticFile(staticPath, response, contentType);
           return;
         }
       }
