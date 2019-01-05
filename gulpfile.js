@@ -25,18 +25,21 @@ gulp.task('clean', function() {
 gulp.task('frontend-ts', function () {
     return frontendTsProject.src()
       .pipe(frontendTsProject())
+      .on('error', handleError)
       .pipe(gulp.dest('.tmp/frontend/'));
 });
 
 gulp.task('backend-ts', function () {
     return backendTsProject.src()
       .pipe(backendTsProject())
+      .on('error', handleError)
       .pipe(gulp.dest('.tmp/backend/'));
 });
 
 gulp.task('shared-ts', function () {
     return sharedTsProject.src()
       .pipe(sharedTsProject())
+      .on('error', handleError)
       .pipe(gulp.dest('.tmp/shared/'));
 });
 
