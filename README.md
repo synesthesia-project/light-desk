@@ -45,6 +45,14 @@ group.addChild(button);
 button.addListener(buttonPressed);
 ```
 
+Upon running this code, a URL will be printed to stdout which can be visited from a web browser to view the control panel, e.g:
+
+```
+$ node index.js
+Starting light desk on port: 1337
+Light Desk Started: http://localhost:1337
+```
+
 See the [examples](https://github.com/synesthesia-project/light-desk/tree/master/examples) directory for full examples.
 
 ## Typescript
