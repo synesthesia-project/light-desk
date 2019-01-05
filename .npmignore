@@ -1,0 +1,11 @@
+/.lgtm
+/.tmp
+/docs
+/node_modules
+/src
+.gitignore
+.npmignore
+azure-pipelines.yml
+gulpfile.js
+tslint.json
+yarn.lock
