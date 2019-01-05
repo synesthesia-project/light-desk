@@ -2,6 +2,7 @@
   "name": "@synesthesia-project/light-desk",
   "version": "0.0.1",
   "description": "A Node.js library for creating control panels for controlling lighting and other things",
+  "keywords": ["lighting", "lights", "dmx", "ola", "osc", "react", "touch"],
   "license": "MIT",
   "main": "build/backend/index.js",
   "types": "build/backend/index.d.js",
