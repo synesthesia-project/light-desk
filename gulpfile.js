@@ -104,8 +104,8 @@ gulp.task('docs', ['clean-docs'], function() {
         module: 'commonjs',
         target: 'es6',
         out: 'docs/api',
-        name: 'API Docs - Synesthesia Project Light Desk',
-        exclude: 'src/shared/**/*,src/backend/util/**/*,src/backend/util/**/*'
+        name: 'API Reference - Synesthesia Project Light Desk',
+        exclude: 'src/shared/**/*,src/backend/util/**/*,src/backend/server.ts,src/backend/components/base.ts'
     }));
 });
 
