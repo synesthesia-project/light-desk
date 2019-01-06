@@ -11,8 +11,8 @@ export interface GroupComponent extends BaseComponent {
   children: Component[];
 }
 
-export interface SliderComponent extends BaseComponent {
-  component: 'slider';
+export interface SliderButtonComponent extends BaseComponent {
+  component: 'slider_button';
   min: number;
   max: number;
   step: number;
@@ -35,7 +35,7 @@ export interface SwitchComponent extends BaseComponent {
   state: 'on' | 'off';
 }
 
-export type Component = GroupComponent | SliderComponent | LabelComponent | ButtonComponent | SwitchComponent;
+export type Component = GroupComponent | SliderButtonComponent | LabelComponent | ButtonComponent | SwitchComponent;
 
 export interface UpdateTreeMsg {
   type: 'update_tree';
@@ -49,8 +49,8 @@ export interface BaseClientComponentMessage {
   componentKey: number;
 }
 
-export interface SliderUpdateMessage extends BaseClientComponentMessage {
-  component: 'slider';
+export interface SliderButtonUpdateMessage extends BaseClientComponentMessage {
+  component: 'slider_button';
   value: number;
 }
 
@@ -62,6 +62,6 @@ export interface SwitchToggleMessage extends BaseClientComponentMessage {
   component: 'switch';
 }
 
-export type ClientComponentMessage = SliderUpdateMessage | ButtonPressMessage | SwitchToggleMessage;
+export type ClientComponentMessage = SliderButtonUpdateMessage | ButtonPressMessage | SwitchToggleMessage;
 
 export type ClientMessage = ClientComponentMessage;
