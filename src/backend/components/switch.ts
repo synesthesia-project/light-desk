@@ -5,6 +5,11 @@ import {Component} from './base';
 
 type Listener = (state: 'on' | 'off') => void;
 
+/**
+ * A component that allows you to switch between an "on" and "off" state.
+ *
+ * ![](media://images/switch_screenshot.png)
+ */
 export class Switch extends Component {
 
   private state: 'on' | 'off';

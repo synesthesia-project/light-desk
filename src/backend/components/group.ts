@@ -9,6 +9,13 @@ const DEFAULT_STYLE: proto.GroupComponentStyle = {
   direction: 'horizontal'
 };
 
+/**
+ * A collection of components, grouped in either a row or column. Can contain
+ * further groups as children to organize components however you wish, and have
+ * a number of styling options (such as removing the border).
+ *
+ * ![](media://images/group_screenshot.png)
+ */
 export class Group extends Component implements Parent {
 
   private readonly children: Component[] = [];

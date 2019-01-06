@@ -8,7 +8,7 @@ You simply install and use the node module in your Node.js project, and then vis
 
 This project is very much a work in progress!
 
-![Screenshot](docs/images/screenshot.png)
+![Screenshot](docs/media/images/screenshot.png)
 
 ## Installation
 

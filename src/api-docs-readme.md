@@ -19,10 +19,35 @@ const label = new lightDesk.Label(/* ... */);
 
 ### [`Button`](classes/_components_button_.button.html)
 
+A simple component that can be "pressed" to trigger things.
+
+[![](media://images/button_screenshot.png)](classes/_components_button_.button.html)
+
 ### [`Group`](classes/_components_group_.group.html)
+
+A collection of components, grouped in either a row or column. Can contain
+further groups as children to organize components however you wish, and have a
+number of styling options (such as removing the border).
+
+[![](media://images/group_screenshot.png)](classes/_components_group_.group.html)
 
 ### [`Label`](classes/_components_label_.label.html)
 
+A simple text component. Could be used to label components in a desk, or for
+more dynamic purposes such as displaying the status of something.
+
+[![](media://images/label_screenshot.png)](classes/_components_label_.label.html)
+
 ### [`Slider`](classes/_components_slider_.slider.html)
 
+A button that when "pressed" or "touched" expands to reveal a slider that allows
+you to change the numeric value of something (between some maximum and minimum
+that you define). Could be used for example: for dimmers, or DMX values.
+
+[![](media://images/sliderbutton_screenshot.png)](classes/_components_slider_.slider.html)
+
 ### [`Switch`](classes/_components_switch_.switch.html)
+
+A component that allows you to switch between an "on" and "off" state.
+
+[![](media://images/switch_screenshot.png)](classes/_components_switch_.switch.html)

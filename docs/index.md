@@ -1,6 +1,6 @@
 # Synesthesia Project Light Desk
 
-light-desk is a library for creating virtual control panels for controlling
+`light-desk` is a library for creating virtual control panels for controlling
 lighting and other things. These control panels are designed to work well with
 both touch-screen devices and mouse cursors alike.
 
@@ -10,7 +10,7 @@ while your project is running.
 
 The project is open source, and the source code is available [on GitHub](https://github.com/synesthesia-project/light-desk).
 
-![Screenshot](images/screenshot.png)
+![Screenshot](media/images/screenshot.png)
 
 ## Installation
 

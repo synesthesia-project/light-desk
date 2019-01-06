@@ -108,7 +108,8 @@ gulp.task('docs', ['clean-docs'], function() {
         exclude: 'src/shared/**/*,src/backend/util/**/*,src/backend/server.ts,src/backend/components/base.ts',
         // So that the generated output is consistent when the documentation hasn't changed, always use
         // 'master' as the branch, rather than the sha of the source that was used.
-        gitRevision: 'master'
+        gitRevision: 'master',
+        media: 'docs/media'
     }));
 });
 

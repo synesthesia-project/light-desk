@@ -7,6 +7,14 @@ type Listener = (value: number) => void;
 
 export type SliderMode = 'writeThrough' | 'writeBack';
 
+/**
+ * A button that when "pressed" or "touched" expands to reveal a slider that
+ * allows you to change the numeric value of something (between some maximum and
+ * minimum that you define). Could be used for example: for dimmers, or DMX
+ * values.
+ *
+ * ![](media://images/sliderbutton_screenshot.png)
+ */
 export class Slider extends Component {
   private min: number;
   private max: number;

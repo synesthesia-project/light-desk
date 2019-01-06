@@ -5,6 +5,11 @@ import {Component} from './base';
 
 type Listener = () => void;
 
+/**
+ * A simple component that can be "pressed" to trigger things.
+ *
+ * ![](media://images/button_screenshot.png)
+ */
 export class Button extends Component {
 
   private text: string;

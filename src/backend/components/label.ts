@@ -9,6 +9,12 @@ const DEFAULT_STYLE: proto.LabelComponentStyle = {
   bold: false
 };
 
+/**
+ * A simple text component. Could be used to label components in a desk, or for
+ * more dynamic purposes such as displaying the status of something.
+ *
+ * ![](media://images/label_screenshot.png)
+ */
 export class Label extends Component {
 
   private readonly style: proto.LabelComponentStyle;
