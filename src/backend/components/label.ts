@@ -1,14 +1,10 @@
 import {extend} from 'lodash';
 
 import * as proto from '../../shared/proto';
-import {LabelComponentStyle} from '../types/styles';
+import {LabelComponentStyle, LABEL_DEFAULT_STYLE} from '../types/styles';
 import {IDMap} from '../util/id-map';
 
 import {Component} from './base';
-
-const DEFAULT_STYLE: LabelComponentStyle = {
-  bold: false
-};
 
 /**
  * A simple text component. Could be used to label components in a desk, or for
@@ -25,7 +21,7 @@ export class Label extends Component {
 
   public constructor(text: string, style: Partial<LabelComponentStyle> = {}) {
     super();
-    this.style = extend({}, DEFAULT_STYLE, style);
+    this.style = extend({}, LABEL_DEFAULT_STYLE, style);
     this.text = text;
   }
 

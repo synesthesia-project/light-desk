@@ -1,14 +1,10 @@
 import {extend} from 'lodash';
 
 import * as proto from '../../shared/proto';
-import {GroupComponentStyle} from '../types/styles';
+import {GroupComponentStyle, GROUP_DEFAULT_STYLE} from '../types/styles';
 import {IDMap} from '../util/id-map';
 
 import {Component, Parent} from './base';
-
-const DEFAULT_STYLE: GroupComponentStyle = {
-  direction: 'horizontal'
-};
 
 /**
  * A collection of components, grouped in either a row or column. Can contain
@@ -28,7 +24,7 @@ export class Group extends Component implements Parent {
 
   public constructor(style: Partial<GroupComponentStyle> = {}) {
     super();
-    this.style = extend({}, DEFAULT_STYLE, style);
+    this.style = extend({}, GROUP_DEFAULT_STYLE, style);
   }
 
   public addChild(component: Component) {
