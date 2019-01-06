@@ -17,7 +17,7 @@ const OPEN_SLIDER_INNER_WIDTH = OPEN_SLIDER_WIDTH - (SLIDER_PADDING * 3) - SLIDE
 
 interface Props {
   className?: string;
-  info: proto.SliderComponent;
+  info: proto.SliderButtonComponent;
   sendMessage: ((msg: proto.ClientMessage) => void) | null;
 }
 
@@ -26,7 +26,7 @@ interface State {
   newValueDiff: null | number;
 }
 
-class Slider extends React.Component<Props, State> {
+class SliderButton extends React.Component<Props, State> {
 
   public constructor(props: Props) {
     super(props);
@@ -125,7 +125,7 @@ class Slider extends React.Component<Props, State> {
       this.props.sendMessage({
         type: 'component_message',
         componentKey: this.props.info.key,
-        component: 'slider',
+        component: 'slider_button',
         value
       });
     }
@@ -140,7 +140,7 @@ class Slider extends React.Component<Props, State> {
       this.props.sendMessage({
         type: 'component_message',
         componentKey: this.props.info.key,
-        component: 'slider',
+        component: 'slider_button',
         value
       });
     }
@@ -150,7 +150,7 @@ class Slider extends React.Component<Props, State> {
 
 }
 
-const StyledSlider = styled(Slider)`
+const StyledSliderButton = styled(SliderButton)`
   position: relative;
   width: 100px;
   height: 30px;
@@ -216,4 +216,4 @@ const StyledSlider = styled(Slider)`
   }
 `;
 
-export {StyledSlider as Slider};
+export {StyledSliderButton as SliderButton};

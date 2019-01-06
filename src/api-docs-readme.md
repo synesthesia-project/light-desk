@@ -38,13 +38,13 @@ more dynamic purposes such as displaying the status of something.
 
 [![](media://images/label_screenshot.png)](classes/_components_label_.label.html)
 
-### [`Slider`](classes/_components_slider_.slider.html)
+### [`SliderButton`](classes/_components_slider_button_.sliderbutton.html)
 
 A button that when "pressed" or "touched" expands to reveal a slider that allows
 you to change the numeric value of something (between some maximum and minimum
 that you define). Could be used for example: for dimmers, or DMX values.
 
-[![](media://images/sliderbutton_screenshot.png)](classes/_components_slider_.slider.html)
+[![](media://images/sliderbutton_screenshot.png)](classes/_components_slider_button_.sliderbutton.html)
 
 ### [`Switch`](classes/_components_switch_.switch.html)
 

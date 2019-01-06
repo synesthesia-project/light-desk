@@ -1,11 +1,11 @@
 /**
  * Styling options for the [[Group]] component
+ *
+ * Default Styling: [[GROUP_DEFAULT_STYLE]]
  */
 export interface GroupComponentStyle {
   /**
    * In which way should child components of this group be organized?
-   *
-   * Default: 'horizontal'
    */
   direction: 'horizontal' | 'vertical';
   /**
@@ -23,7 +23,16 @@ export interface GroupComponentStyle {
 }
 
 /**
+ * Default [[GroupComponentStyle]] for the [[Group]] component.
+ */
+export const GROUP_DEFAULT_STYLE: GroupComponentStyle = {
+  direction: 'horizontal'
+};
+
+/**
  * Styling options for the [[Label]] component
+ *
+ * Default Styling: [[LABEL_DEFAULT_STYLE]]
  */
 export interface LabelComponentStyle {
   /**
@@ -31,3 +40,10 @@ export interface LabelComponentStyle {
    */
   bold?: boolean;
 }
+
+/**
+ * Default [[LabelComponentStyle]] for the [[Label]] component.
+ */
+export const LABEL_DEFAULT_STYLE: LabelComponentStyle = {
+  bold: false
+};

@@ -78,5 +78,5 @@ export {Component} from './components/base';
 export {Button} from './components/button';
 export {Group} from './components/group';
 export {Label} from './components/label';
-export {Slider} from './components/slider';
+export {SliderButton} from './components/slider_button';
 export {Switch} from './components/switch';
