@@ -23,6 +23,7 @@ steps:
 - script: |
     gulp docs
     git status
+    git diff
     # Exit with code 1 if git-status not clean
     bash -c 'if [ -n "$(git status --porcelain)" ]; then echo "Docs have changed but have not been regenerated"; exit 1; fi'
   displayName: 'check docs are up to date'
