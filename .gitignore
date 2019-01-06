@@ -1,5 +1,5 @@
 node_modules/
-build/
-.tmp/
+/build/
+/.tmp/
 yarn-error.log
 npm-debug.log

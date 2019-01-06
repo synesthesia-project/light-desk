@@ -2,7 +2,15 @@
   "name": "@synesthesia-project/light-desk",
   "version": "0.0.2",
   "description": "A Node.js library for creating control panels for controlling lighting and other things",
-  "keywords": ["lighting", "lights", "dmx", "ola", "osc", "react", "touch"],
+  "keywords": [
+    "lighting",
+    "lights",
+    "dmx",
+    "ola",
+    "osc",
+    "react",
+    "touch"
+  ],
   "license": "MIT",
   "main": "build/backend/index.js",
   "types": "build/backend/index.d.js",
@@ -24,6 +32,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-sourcemaps": "1.6.0",
     "gulp-tslint": "^8.1.3",
+    "gulp-typedoc": "^2.2.1",
     "gulp-typescript": "^5.0.0",
     "gulp-webpack": "1.5.0",
     "react": "15.4.2",
@@ -36,7 +45,8 @@
     "webpack": "1.14.0"
   },
   "dependencies": {
-    "ws": "2.3.1",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "typedoc": "^0.14.0",
+    "ws": "2.3.1"
   }
 }

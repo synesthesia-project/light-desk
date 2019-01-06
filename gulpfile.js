@@ -5,6 +5,7 @@ var ts = require('gulp-typescript');
 var tslint = require('gulp-tslint');
 var runSequence = require('run-sequence');
 var webpack = require('webpack');
+var typedoc = require("gulp-typedoc");
 
 var frontendTsProject = ts.createProject('src/frontend/tsconfig.json');
 var backendTsProject = ts.createProject('src/backend/tsconfig.json');
@@ -88,6 +89,24 @@ gulp.task('shared-copy', ['shared-ts'], function () {
 
 gulp.task('frontend-audio-copy', ['shared-ts'], function () {
     return gulp.src(['src/frontend/audio/**/*']).pipe(gulp.dest('build/frontend/audio'));
+});
+
+gulp.task('clean-docs', function() {
+  return gulp.src(['docs'], {read: false})
+        .pipe(clean());
+});
+
+gulp.task('docs', ['clean-docs'], function() {
+  return gulp
+    .src(['src/backend/**/*.ts'])
+    .pipe(typedoc({
+        readme: 'none',
+        module: 'commonjs',
+        target: 'es6',
+        out: 'docs',
+        name: 'Synesthesia Light Desk',
+        exclude: 'src/shared/**/*,src/backend/util/**/*,src/backend/util/**/*'
+    }));
 });
 
 gulp.task('default', function(callback) {
