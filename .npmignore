@@ -1,6 +1,7 @@
 /.lgtm
 /.tmp
 /docs
+/examples
 /node_modules
 /src
 .gitignore
