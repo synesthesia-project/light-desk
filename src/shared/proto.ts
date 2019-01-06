@@ -1,18 +1,13 @@
+import * as styles from '../backend/types/styles';
 
 interface BaseComponent {
   key: number;
 }
 
-export interface GroupComponentStyle {
-  direction: 'horizontal' | 'vertical';
-  wrap?: boolean;
-  noBorder?: boolean;
-}
-
 export interface GroupComponent extends BaseComponent {
   component: 'group';
   title?: string;
-  style: GroupComponentStyle;
+  style: styles.GroupComponentStyle;
   children: Component[];
 }
 
@@ -24,13 +19,9 @@ export interface SliderComponent extends BaseComponent {
   value: number | null;
 }
 
-export interface LabelComponentStyle {
-  bold?: boolean;
-}
-
 export interface LabelComponent extends BaseComponent {
   component: 'label';
-  style: LabelComponentStyle;
+  style: styles.LabelComponentStyle;
   text: string;
 }
 

@@ -1,11 +1,12 @@
 import {extend} from 'lodash';
 
 import * as proto from '../../shared/proto';
+import {LabelComponentStyle} from '../types/styles';
 import {IDMap} from '../util/id-map';
 
 import {Component} from './base';
 
-const DEFAULT_STYLE: proto.LabelComponentStyle = {
+const DEFAULT_STYLE: LabelComponentStyle = {
   bold: false
 };
 
@@ -17,10 +18,10 @@ const DEFAULT_STYLE: proto.LabelComponentStyle = {
  */
 export class Label extends Component {
 
-  private readonly style: proto.LabelComponentStyle;
+  private readonly style: LabelComponentStyle;
   private text: string;
 
-  public constructor(text: string, style: Partial<proto.LabelComponentStyle> = {}) {
+  public constructor(text: string, style: Partial<LabelComponentStyle> = {}) {
     super();
     this.style = extend({}, DEFAULT_STYLE, style);
     this.text = text;

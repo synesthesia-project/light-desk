@@ -1,11 +1,12 @@
 import {extend} from 'lodash';
 
 import * as proto from '../../shared/proto';
+import {GroupComponentStyle} from '../types/styles';
 import {IDMap} from '../util/id-map';
 
 import {Component, Parent} from './base';
 
-const DEFAULT_STYLE: proto.GroupComponentStyle = {
+const DEFAULT_STYLE: GroupComponentStyle = {
   direction: 'horizontal'
 };
 
@@ -19,10 +20,10 @@ const DEFAULT_STYLE: proto.GroupComponentStyle = {
 export class Group extends Component implements Parent {
 
   private readonly children: Component[] = [];
-  private readonly style: proto.GroupComponentStyle;
+  private readonly style: GroupComponentStyle;
   private title: string | undefined = undefined;
 
-  public constructor(style: Partial<proto.GroupComponentStyle> = {}) {
+  public constructor(style: Partial<GroupComponentStyle> = {}) {
     super();
     this.style = extend({}, DEFAULT_STYLE, style);
   }

@@ -74,6 +74,19 @@
 					<div class="lead">
 						<p>A simple component that can be &quot;pressed&quot; to trigger things.</p>
 					</div>
+					<p><strong>Example:</strong></p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> lightDesk = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@synesthesia-project/light-desk'</span>);
+
+<span class="hljs-comment">// ...</span>
+
+<span class="hljs-keyword">const</span> button1 = <span class="hljs-keyword">new</span> lightDesk.Button(<span class="hljs-string">'Button 1'</span>);
+button1.addListener(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Button 1 Pressed'</span>));
+group.addChild(button1);
+
+<span class="hljs-keyword">const</span> button2 = <span class="hljs-keyword">new</span> lightDesk.Button(<span class="hljs-string">'Button 2'</span>);
+button2.addListener(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Button 2 Pressed'</span>));
+group.addChild(button2);</code></pre>
+					<p><strong>Preview:</strong></p>
 					<p><img src="../media/images/button_screenshot.png" alt=""></p>
 				</div>
 			</section>
@@ -132,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L17">components/button.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L35">components/button.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -154,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">listeners<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Set&lt;Listener&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L17">components/button.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L35">components/button.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L15">components/button.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L33">components/button.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -181,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L40">components/button.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L58">components/button.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -205,7 +218,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Component.getProtoInfo</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L24">components/button.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L42">components/button.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -229,7 +242,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Component.handleMessage</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L32">components/button.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/button.ts#L50">components/button.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -309,6 +322,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_types_styles_.html">"types/styles"</a>
 					</li>
 				</ul>
 			</nav>
