@@ -16,12 +16,18 @@ export type SliderMode = 'writeThrough' | 'writeBack';
  * ![](media://images/sliderbutton_screenshot.png)
  */
 export class Slider extends Component {
+  /** @hidden */
   private min: number;
+  /** @hidden */
   private max: number;
+  /** @hidden */
   private step: number;
+  /** @hidden */
   private value: number | null;
+  /** @hidden */
   private mode: SliderMode;
 
+  /** @hidden */
   private readonly listeners = new Set<Listener>();
 
   public constructor(value: number, min = 0, max = 255, step = 5, mode: SliderMode = 'writeBack') {
@@ -33,6 +39,7 @@ export class Slider extends Component {
     this.mode = mode;
   }
 
+  /** @hidden */
   public getProtoInfo(idMap: IDMap): proto.Component {
     return {
       component: 'slider',
@@ -44,6 +51,7 @@ export class Slider extends Component {
     };
   }
 
+  /** @hidden */
   public handleMessage(message: proto.ClientComponentMessage) {
     if (message.component !== 'slider') return;
     const newValue = Math.max(this.min, Math.min(this.max, message.value));

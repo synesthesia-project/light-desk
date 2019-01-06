@@ -30,8 +30,10 @@ type Listener = () => void;
  */
 export class Button extends Component {
 
+  /** @hidden */
   private text: string;
 
+  /** @hidden */
   private readonly listeners = new Set<Listener>();
 
   public constructor(text: string) {
@@ -39,6 +41,7 @@ export class Button extends Component {
     this.text = text;
   }
 
+  /** @hidden */
   public getProtoInfo(idMap: IDMap): proto.Component {
     return {
       component: 'button',
@@ -47,6 +50,7 @@ export class Button extends Component {
     };
   }
 
+  /** @hidden */
   public handleMessage(message: proto.ClientComponentMessage) {
     if (message.component === 'button') {
       for (const l of this.listeners) {

@@ -18,7 +18,9 @@ const DEFAULT_STYLE: LabelComponentStyle = {
  */
 export class Label extends Component {
 
+  /** @hidden */
   private readonly style: LabelComponentStyle;
+  /** @hidden */
   private text: string;
 
   public constructor(text: string, style: Partial<LabelComponentStyle> = {}) {
@@ -27,6 +29,7 @@ export class Label extends Component {
     this.text = text;
   }
 
+  /** @hidden */
   public getProtoInfo(idMap: IDMap): proto.Component {
     return {
       component: 'label',

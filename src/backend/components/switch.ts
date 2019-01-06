@@ -12,8 +12,10 @@ type Listener = (state: 'on' | 'off') => void;
  */
 export class Switch extends Component {
 
+  /** @hidden */
   private state: 'on' | 'off';
 
+  /** @hidden */
   private readonly listeners = new Set<Listener>();
 
   public constructor(state: 'on' | 'off') {
@@ -21,6 +23,7 @@ export class Switch extends Component {
     this.state = state;
   }
 
+  /** @hidden */
   public getProtoInfo(idMap: IDMap): proto.Component {
     return {
       component: 'switch',
@@ -29,6 +32,7 @@ export class Switch extends Component {
     };
   }
 
+  /** @hidden */
   public handleMessage(message: proto.ClientComponentMessage) {
     if (message.component === 'switch') {
       this.state = this.state === 'on' ? 'off' : 'on';

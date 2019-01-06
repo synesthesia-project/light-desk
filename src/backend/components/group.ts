@@ -19,8 +19,11 @@ const DEFAULT_STYLE: GroupComponentStyle = {
  */
 export class Group extends Component implements Parent {
 
+  /** @hidden */
   private readonly children: Component[] = [];
+  /** @hidden */
   private readonly style: GroupComponentStyle;
+  /** @hidden */
   private title: string | undefined = undefined;
 
   public constructor(style: Partial<GroupComponentStyle> = {}) {
@@ -40,6 +43,7 @@ export class Group extends Component implements Parent {
     this.updateTree();
   }
 
+  /** @hidden */
   public getProtoInfo(idMap: IDMap): proto.GroupComponent {
     return {
       component: 'group',
@@ -53,6 +57,8 @@ export class Group extends Component implements Parent {
   /**
    * TODO: we can do this better, right now it broadcasts the message to all
    * components of the tree
+   *
+   * @hidden
    */
   public routeMessage(idMap: IDMap, message: proto.ClientComponentMessage) {
     if (idMap.getId(this) === message.componentKey) {
