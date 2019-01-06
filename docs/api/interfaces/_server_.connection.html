@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Component | Synesthesia Light Desk</title>
+	<title>Connection | API Docs - Synesthesia Project Light Desk</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Synesthesia Light Desk</a>
+					<a href="../index.html" class="title">API Docs - Synesthesia Project Light Desk</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,16 +53,16 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_components_base_.html">&quot;components/base&quot;</a>
+					<a href="../modules/_server_.html">&quot;server&quot;</a>
 				</li>
 				<li>
-					<a href="_components_base_.component.html">Component</a>
+					<a href="_server_.connection.html">Connection</a>
 				</li>
 			</ul>
-			<h1>Class Component</h1>
+			<h1>Interface Connection</h1>
 		</div>
 	</div>
 </header>
@@ -73,24 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Component</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="_components_group_.group.html" class="tsd-signature-type">Group</a>
-							</li>
-							<li>
-								<a href="_components_button_.button.html" class="tsd-signature-type">Button</a>
-							</li>
-							<li>
-								<a href="_components_label_.label.html" class="tsd-signature-type">Label</a>
-							</li>
-							<li>
-								<a href="_components_slider_.slider.html" class="tsd-signature-type">Slider</a>
-							</li>
-							<li>
-								<a href="_components_switch_.switch.html" class="tsd-signature-type">Switch</a>
-							</li>
-						</ul>
+						<span class="target">Connection</span>
 					</li>
 				</ul>
 			</section>
@@ -98,121 +81,36 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_base_.component.html#parent" class="tsd-kind-icon">parent</a></li>
-							</ul>
-						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_base_.component.html#getprotoinfo" class="tsd-kind-icon">get<wbr>Proto<wbr>Info</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_base_.component.html#handlemessage" class="tsd-kind-icon">handle<wbr>Message</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_base_.component.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_base_.component.html#updatetree" class="tsd-kind-icon">update<wbr>Tree</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_server_.connection.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="parent" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parent</h3>
-					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_components_base_.parent.html" class="tsd-signature-type">Parent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/a26bb65/src/backend/components/base.ts#L6">components/base.ts:6</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getprotoinfo" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> get<wbr>Proto<wbr>Info</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Proto<wbr>Info<span class="tsd-signature-symbol">(</span>idMap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IDMap</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">proto.Component</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="sendmessage" class="tsd-anchor"></a>
+					<h3>send<wbr>Message</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Message<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">proto.ServerMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/a26bb65/src/backend/components/base.ts#L19">components/base.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/f42815a/src/backend/server.ts#L27">server.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>idMap: <span class="tsd-signature-type">IDMap</span></h5>
+									<h5>msg: <span class="tsd-signature-type">proto.ServerMessage</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">proto.Component</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="handlemessage" class="tsd-anchor"></a>
-					<h3>handle<wbr>Message</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Message<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">proto.ClientComponentMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/a26bb65/src/backend/components/base.ts#L21">components/base.ts:21</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>message: <span class="tsd-signature-type">proto.ClientComponentMessage</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setparent" class="tsd-anchor"></a>
-					<h3>set<wbr>Parent</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Parent<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><a href="../interfaces/_components_base_.parent.html" class="tsd-signature-type">Parent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/a26bb65/src/backend/components/base.ts#L8">components/base.ts:8</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>parent: <a href="../interfaces/_components_base_.parent.html" class="tsd-signature-type">Parent</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updatetree" class="tsd-anchor"></a>
-					<h3>update<wbr>Tree</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Tree<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/a26bb65/src/backend/components/base.ts#L15">components/base.ts:15</a></li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -223,9 +121,9 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_components_base_.html">"components/base"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -246,39 +144,33 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_server_.html">"server"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/_server_.server.html" class="tsd-kind-icon">Server</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_components_base_.component.html" class="tsd-kind-icon">Component</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_server_.connection.html" class="tsd-kind-icon">Connection</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_components_base_.component.html#parent" class="tsd-kind-icon">parent</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_components_base_.component.html#getprotoinfo" class="tsd-kind-icon">get<wbr>Proto<wbr>Info</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_components_base_.component.html#handlemessage" class="tsd-kind-icon">handle<wbr>Message</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_components_base_.component.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_components_base_.component.html#updatetree" class="tsd-kind-icon">update<wbr>Tree</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_server_.connection.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_components_base_.parent.html" class="tsd-kind-icon">Parent</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_server_.html#static_dir" class="tsd-kind-icon">STATIC_<wbr>DIR</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_server_.html#static_files" class="tsd-kind-icon">STATIC_<wbr>FILES</a>
 					</li>
 				</ul>
 			</nav>

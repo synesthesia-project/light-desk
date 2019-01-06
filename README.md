@@ -6,7 +6,7 @@ A Node.js library for creating control panels for controlling lighting and other
 
 This project is very much a work in progress!
 
-![Screenshot](src/docs/images/screenshot.png)
+![Screenshot](docs/images/screenshot.png)
 
 ## Installation
 
@@ -24,7 +24,7 @@ $ yarn add @synesthesia-project/light-desk
 
 Alternatively, you can add this repository as a submodule to your repo, and add a symlink from `node_modules/@synesthesia-project/light-desk` to the location of that submodule within your repo to use in-development versions, and if you want to contribute, such as what's done in the [synesthesia-project/synesthesia](https://github.com/synesthesia-project/synesthesia) repo.
 
-## Usage
+## Hello World Example
 
 ```js
 const lightDesk = require('@synesthesia-project/light-desk');
@@ -54,6 +54,10 @@ Light Desk Started: http://localhost:1337
 ```
 
 See the [examples](https://github.com/synesthesia-project/light-desk/tree/master/examples) directory for full examples.
+
+## Documentation
+
+Full documentation can be found on the [documentation site](https://synesthesia-project.github.io/light-desk/).
 
 ## Typescript
 

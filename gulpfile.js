@@ -92,7 +92,7 @@ gulp.task('frontend-audio-copy', ['shared-ts'], function () {
 });
 
 gulp.task('clean-docs', function() {
-  return gulp.src(['docs'], {read: false})
+  return gulp.src(['docs/api'], {read: false})
         .pipe(clean());
 });
 
@@ -100,11 +100,11 @@ gulp.task('docs', ['clean-docs'], function() {
   return gulp
     .src(['src/backend/**/*.ts'])
     .pipe(typedoc({
-        readme: 'none',
+        readme: 'src/api-docs-readme.md',
         module: 'commonjs',
         target: 'es6',
-        out: 'docs',
-        name: 'Synesthesia Light Desk',
+        out: 'docs/api',
+        name: 'API Docs - Synesthesia Project Light Desk',
         exclude: 'src/shared/**/*,src/backend/util/**/*,src/backend/util/**/*'
     }));
 });
