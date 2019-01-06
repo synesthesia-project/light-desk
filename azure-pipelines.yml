@@ -17,5 +17,13 @@ steps:
 
 - script: |
     yarn install
-    gulp default --gulpfile gulpfile.js
+    gulp default
   displayName: 'yarn install and run gulp'
+
+- script: |
+    gulp docs
+    git status
+    git diff
+    # Exit with code 1 if git-status not clean
+    bash -c 'if [ -n "$(git status --porcelain)" ]; then echo "Docs have changed but have not been regenerated"; exit 1; fi'
+  displayName: 'check docs are up to date'
