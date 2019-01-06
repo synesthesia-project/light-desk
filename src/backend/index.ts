@@ -1,3 +1,5 @@
+import {extend} from 'lodash';
+
 import {Parent} from './components/base';
 import {Group} from './components/group';
 import {IDMap} from './util/id-map';
@@ -6,7 +8,13 @@ import * as proto from '../shared/proto';
 
 import {Connection, Server} from './server';
 
-const DEFAULT_PORT = 1337;
+export interface LightDeskOptions {
+  port: number;
+}
+
+export const DEFAULT_LIGHT_DESK_OPTIONS: LightDeskOptions = {
+  port: 1337
+};
 
 export class LightDesk implements Parent {
 
@@ -18,10 +26,11 @@ export class LightDesk implements Parent {
   private readonly componentIDMap = new IDMap();
   private readonly connections = new Set<Connection>();
 
-  constructor(port = DEFAULT_PORT) {
-    console.log('Starting light desk on port:', port);
+  constructor(options: Partial<LightDeskOptions> = {}) {
+    const fullOptions = extend({}, DEFAULT_LIGHT_DESK_OPTIONS, options);
+    console.log('Starting light desk on port:', fullOptions.port);
     this.server = new Server(
-      port,
+      fullOptions.port,
       this.onNewConnection.bind(this),
       this.onClosedConnection.bind(this),
       this.onMessage.bind(this));
