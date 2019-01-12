@@ -102,7 +102,7 @@ A basic example TypeScript project that uses `light-desk` to control a virtual "
 It should be pretty simple to extend this project to actually control the brightness of a real
 light, e.g. some light strip controlled by a raspberry pi, or some DMX fixture.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/d5p26aAb-hQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/d5p26aAb-hQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## [Api Reference](https://synesthesia-project.github.io/light-desk/api/)
 
