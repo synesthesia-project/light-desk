@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;components/label&quot; | API Reference - Synesthesia Project Light Desk</title>
+	<title>&quot;util/color&quot; | API Reference - Synesthesia Project Light Desk</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,16 +56,31 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_components_label_.html">&quot;components/label&quot;</a>
+					<a href="_util_color_.html">&quot;util/color&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;components/label&quot;</h1>
+			<h1>External module &quot;util/color&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Classes and type definitions to handle colors.</p>
+					</div>
+					<p>This module is exported from the main module, like components.</p>
+					<p><strong>Example:</strong></p>
+					<pre><code class="language-ts"><span class="hljs-comment">// Javascript:</span>
+<span class="hljs-keyword">const</span> color = <span class="hljs-keyword">new</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">'@synesthesia-project/light-desk'</span>).color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+
+<span class="hljs-comment">// TypeScript:</span>
+<span class="hljs-keyword">import</span> {color} <span class="hljs-keyword">from</span> <span class="hljs-string">'@synesthesia-project/light-desk'</span>;
+<span class="hljs-keyword">const</span> color = <span class="hljs-keyword">new</span> color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);</code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -73,9 +88,96 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_components_label_.label.html" class="tsd-kind-icon">Label</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_util_color_.rgbcolor.html" class="tsd-kind-icon">RGBColor</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_util_color_.color.html" class="tsd-kind-icon">Color</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_util_color_.html#colorjson" class="tsd-kind-icon">ColorJSON</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_util_color_.html#rgbcolorjson" class="tsd-kind-icon">RGBColorJSON</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_util_color_.html#color_rgb_white" class="tsd-kind-icon">COLOR_<wbr>RGB_<wbr>WHITE</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="colorjson" class="tsd-anchor"></a>
+					<h3>ColorJSON</h3>
+					<div class="tsd-signature tsd-kind-icon">ColorJSON<span class="tsd-signature-symbol">:</span> <a href="_util_color_.html#rgbcolorjson" class="tsd-signature-type">RGBColorJSON</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L27">util/color.ts:27</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An object that can be used directly in JSON to represent a <a href="../interfaces/_util_color_.color.html">Color</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="rgbcolorjson" class="tsd-anchor"></a>
+					<h3>RGBColorJSON</h3>
+					<div class="tsd-signature tsd-kind-icon">RGBColorJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L19">util/color.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>JSON version of <a href="../classes/_util_color_.rgbcolor.html">RGBColor</a></p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>g<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"rgb"</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="color_rgb_white" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> COLOR_<wbr>RGB_<wbr>WHITE</h3>
+					<div class="tsd-signature tsd-kind-icon">COLOR_<wbr>RGB_<wbr>WHITE<span class="tsd-signature-symbol">:</span> <a href="../classes/_util_color_.rgbcolor.html" class="tsd-signature-type">RGBColor</a><span class="tsd-signature-symbol"> =&nbsp;new RGBColor(255, 255, 255)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L121">util/color.ts:121</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>#ffffff</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -95,7 +197,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_components_group_.html">"components/group"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_components_label_.html">"components/label"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -113,7 +215,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_types_styles_.html">"types/styles"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_util_color_.html">"util/color"</a>
 					</li>
 				</ul>
@@ -121,7 +223,19 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_components_label_.label.html" class="tsd-kind-icon">Label</a>
+						<a href="../classes/_util_color_.rgbcolor.html" class="tsd-kind-icon">RGBColor</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_util_color_.color.html" class="tsd-kind-icon">Color</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_util_color_.html#colorjson" class="tsd-kind-icon">ColorJSON</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_util_color_.html#rgbcolorjson" class="tsd-kind-icon">RGBColorJSON</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_util_color_.html#color_rgb_white" class="tsd-kind-icon">COLOR_<wbr>RGB_<wbr>WHITE</a>
 					</li>
 				</ul>
 			</nav>

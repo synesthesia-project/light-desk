@@ -105,7 +105,7 @@ gulp.task('docs', ['clean-docs'], function() {
         target: 'es6',
         out: 'docs/api',
         name: 'API Reference - Synesthesia Project Light Desk',
-        exclude: 'src/shared/**/*,src/backend/util/**/*,src/backend/server.ts',
+        exclude: 'src/shared/**/*,src/backend/util/id-map.ts,src/backend/server.ts',
         // So that the generated output is consistent when the documentation hasn't changed, always use
         // 'master' as the branch, rather than the sha of the source that was used.
         gitRevision: 'master',

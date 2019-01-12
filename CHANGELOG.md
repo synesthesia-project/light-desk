@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+- Introduced `Rect` component
+
 ## [1.0.0] - 2019-01-06
 
 First "full" release of the project

@@ -7,10 +7,27 @@ import {IDMap} from '../util/id-map';
 import {Component} from './base';
 
 /**
- * A simple text component. Could be used to label components in a desk, or for
- * more dynamic purposes such as displaying the status of something.
+ * A simple rectangle component. Could be used for example to indicate
+ * certain states, or represent the color of certain lights or fixtures,
+ * or perhaps colours used in a chase.
  *
- * ![](media://images/label_screenshot.png)
+ * **Example:**
+ *
+ * ```js
+ * const lightDesk = require('@synesthesia-project/light-desk');
+ *
+ * // ...
+ *
+ * group.addChild(new lightDesk.Rect(new lightDesk.color.RGBColor(85, 85, 85)));
+ * group.addChild(new lightDesk.Rect(new lightDesk.color.RGBColor(255, 255, 0)));
+ * group.addChild(new lightDesk.Rect(new lightDesk.color.RGBColor(255, 0, 0)));
+ * group.addChild(new lightDesk.Rect(new lightDesk.color.RGBColor(255, 255, 255)));
+ * group.addChild(new lightDesk.Rect(new lightDesk.color.RGBColor(200, 200, 200)));
+ * ```
+ *
+ * **Preview:**
+ *
+ * ![](media://images/rect_screenshot.png)
  */
 export class Rect extends Component {
 
