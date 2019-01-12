@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;components/label&quot; | API Reference - Synesthesia Project Light Desk</title>
+	<title>Rect | API Reference - Synesthesia Project Light Desk</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,27 +56,122 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_components_label_.html">&quot;components/label&quot;</a>
+					<a href="../modules/_components_rect_.html">&quot;components/rect&quot;</a>
+				</li>
+				<li>
+					<a href="_components_rect_.rect.html">Rect</a>
 				</li>
 			</ul>
-			<h1>External module &quot;components/label&quot;</h1>
+			<h1>Class Rect</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A simple rectangle component. Could be used for example to indicate
+							certain states, or represent the color of certain lights or fixtures,
+						or perhaps colours used in a chase.</p>
+					</div>
+					<p><strong>Example:</strong></p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> lightDesk = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@synesthesia-project/light-desk'</span>);
+
+<span class="hljs-comment">// ...</span>
+
+group.addChild(<span class="hljs-keyword">new</span> lightDesk.Rect(<span class="hljs-keyword">new</span> lightDesk.color.RGBColor(<span class="hljs-number">85</span>, <span class="hljs-number">85</span>, <span class="hljs-number">85</span>)));
+group.addChild(<span class="hljs-keyword">new</span> lightDesk.Rect(<span class="hljs-keyword">new</span> lightDesk.color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>)));
+group.addChild(<span class="hljs-keyword">new</span> lightDesk.Rect(<span class="hljs-keyword">new</span> lightDesk.color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));
+group.addChild(<span class="hljs-keyword">new</span> lightDesk.Rect(<span class="hljs-keyword">new</span> lightDesk.color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>)));
+group.addChild(<span class="hljs-keyword">new</span> lightDesk.Rect(<span class="hljs-keyword">new</span> lightDesk.color.RGBColor(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)));</code></pre>
+					<p><strong>Preview:</strong></p>
+					<p><img src="../media/images/rect_screenshot.png" alt=""></p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="_components_base_.component.html" class="tsd-signature-type">Component</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">Rect</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_components_label_.label.html" class="tsd-kind-icon">Label</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_components_rect_.rect.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_rect_.rect.html#setcolor" class="tsd-kind-icon">set<wbr>Color</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Rect<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_util_color_.color.html" class="tsd-signature-type">Color</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_components_rect_.rect.html" class="tsd-signature-type">Rect</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/rect.ts#L33">components/rect.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> color: <a href="../interfaces/_util_color_.color.html" class="tsd-signature-type">Color</a><span class="tsd-signature-symbol"> =&nbsp;COLOR_RGB_WHITE</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_components_rect_.rect.html" class="tsd-signature-type">Rect</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setcolor" class="tsd-anchor"></a>
+					<h3>set<wbr>Color</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Color<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">: </span><a href="../interfaces/_util_color_.color.html" class="tsd-signature-type">Color</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_components_rect_.rect.html" class="tsd-signature-type">Rect</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/components/rect.ts#L49">components/rect.ts:49</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>color: <a href="../interfaces/_util_color_.color.html" class="tsd-signature-type">Color</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_components_rect_.rect.html" class="tsd-signature-type">Rect</a></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -87,42 +182,54 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_base_.html">"components/base"</a>
+						<a href="../modules/_components_base_.html">"components/base"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_button_.html">"components/button"</a>
+						<a href="../modules/_components_button_.html">"components/button"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_group_.html">"components/group"</a>
+						<a href="../modules/_components_group_.html">"components/group"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_label_.html">"components/label"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_components_label_.html">"components/label"</a>
+						<a href="../modules/_components_rect_.html">"components/rect"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_rect_.html">"components/rect"</a>
+						<a href="../modules/_components_slider_button_.html">"components/slider_<wbr>button"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_slider_button_.html">"components/slider_<wbr>button"</a>
+						<a href="../modules/_components_switch_.html">"components/switch"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_switch_.html">"components/switch"</a>
+						<a href="../modules/_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
+						<a href="../modules/_types_styles_.html">"types/styles"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_types_styles_.html">"types/styles"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_util_color_.html">"util/color"</a>
+						<a href="../modules/_util_color_.html">"util/color"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_components_label_.label.html" class="tsd-kind-icon">Label</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_components_rect_.rect.html" class="tsd-kind-icon">Rect</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_components_rect_.rect.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_rect_.rect.html#setcolor" class="tsd-kind-icon">set<wbr>Color</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

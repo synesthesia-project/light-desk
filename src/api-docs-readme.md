@@ -38,6 +38,14 @@ more dynamic purposes such as displaying the status of something.
 
 [![](media://images/label_screenshot.png)](classes/_components_label_.label.html)
 
+### [`Rect`](classes/_components_rect_.rect.html)
+
+A simple rectangle component. Could be used for example to indicate certain
+states, or represent the color of certain lights or fixtures, or perhaps colours
+used in a chase.
+
+[![](media://images/rect_screenshot.png)](classes/_components_rect_.rect.html)
+
 ### [`SliderButton`](classes/_components_slider_button_.sliderbutton.html)
 
 A button that when "pressed" or "touched" expands to reveal a slider that allows

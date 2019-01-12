@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;components/label&quot; | API Reference - Synesthesia Project Light Desk</title>
+	<title>Color | API Reference - Synesthesia Project Light Desk</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,27 +56,115 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_components_label_.html">&quot;components/label&quot;</a>
+					<a href="../modules/_util_color_.html">&quot;util/color&quot;</a>
+				</li>
+				<li>
+					<a href="_util_color_.color.html">Color</a>
 				</li>
 			</ul>
-			<h1>External module &quot;components/label&quot;</h1>
+			<h1>Interface Color</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Color</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/_util_color_.rgbcolor.html" class="tsd-signature-type">RGBColor</a></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_components_label_.label.html" class="tsd-kind-icon">Label</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_util_color_.color.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_util_color_.color.html#json" class="tsd-kind-icon">json</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_util_color_.color.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="equals" class="tsd-anchor"></a>
+					<h3>equals</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="_util_color_.color.html" class="tsd-signature-type">Color</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L35">util/color.ts:35</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="_util_color_.color.html" class="tsd-signature-type">Color</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if this color is equal to the color given</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="json" class="tsd-anchor"></a>
+					<h3>json</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">json<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_util_color_.html#colorjson" class="tsd-signature-type">ColorJSON</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L33">util/color.ts:33</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_util_color_.html#colorjson" class="tsd-signature-type">ColorJSON</a></h4>
+							<p>an object that describes the color&#39;s properties and can be used in JSON.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="tostring" class="tsd-anchor"></a>
+					<h3>to<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L31">util/color.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>a string representation of the current color</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -87,41 +175,68 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_base_.html">"components/base"</a>
+						<a href="../modules/_components_base_.html">"components/base"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_button_.html">"components/button"</a>
+						<a href="../modules/_components_button_.html">"components/button"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_components_group_.html">"components/group"</a>
+						<a href="../modules/_components_group_.html">"components/group"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_label_.html">"components/label"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_rect_.html">"components/rect"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_slider_button_.html">"components/slider_<wbr>button"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_switch_.html">"components/switch"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_types_styles_.html">"types/styles"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_components_label_.html">"components/label"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_components_rect_.html">"components/rect"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_components_slider_button_.html">"components/slider_<wbr>button"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_components_switch_.html">"components/switch"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_types_styles_.html">"types/styles"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_util_color_.html">"util/color"</a>
+						<a href="../modules/_util_color_.html">"util/color"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_components_label_.label.html" class="tsd-kind-icon">Label</a>
+						<a href="../classes/_util_color_.rgbcolor.html" class="tsd-kind-icon">RGBColor</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_util_color_.color.html" class="tsd-kind-icon">Color</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_util_color_.color.html#equals" class="tsd-kind-icon">equals</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_util_color_.color.html#json" class="tsd-kind-icon">json</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_util_color_.color.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_util_color_.html#colorjson" class="tsd-kind-icon">ColorJSON</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_util_color_.html#rgbcolorjson" class="tsd-kind-icon">RGBColorJSON</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_util_color_.html#color_rgb_white" class="tsd-kind-icon">COLOR_<wbr>RGB_<wbr>WHITE</a>
 					</li>
 				</ul>
 			</nav>

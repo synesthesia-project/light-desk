@@ -1,7 +1,14 @@
 import * as styles from '../backend/types/styles';
+import { ColorJSON } from '../backend/util/color';
+export { ColorJSON } from '../backend/util/color';
 
 interface BaseComponent {
   key: number;
+}
+
+export interface ButtonComponent extends BaseComponent {
+  component: 'button';
+  text: string;
 }
 
 export interface GroupComponent extends BaseComponent {
@@ -9,6 +16,17 @@ export interface GroupComponent extends BaseComponent {
   title?: string;
   style: styles.GroupComponentStyle;
   children: Component[];
+}
+
+export interface LabelComponent extends BaseComponent {
+  component: 'label';
+  style: styles.LabelComponentStyle;
+  text: string;
+}
+
+export interface RectComponent extends BaseComponent {
+  component: 'rect';
+  color: ColorJSON;
 }
 
 export interface SliderButtonComponent extends BaseComponent {
@@ -19,23 +37,12 @@ export interface SliderButtonComponent extends BaseComponent {
   value: number | null;
 }
 
-export interface LabelComponent extends BaseComponent {
-  component: 'label';
-  style: styles.LabelComponentStyle;
-  text: string;
-}
-
-export interface ButtonComponent extends BaseComponent {
-  component: 'button';
-  text: string;
-}
-
 export interface SwitchComponent extends BaseComponent {
   component: 'switch';
   state: 'on' | 'off';
 }
 
-export type Component = GroupComponent | SliderButtonComponent | LabelComponent | ButtonComponent | SwitchComponent;
+export type Component = ButtonComponent | GroupComponent | LabelComponent | RectComponent | SliderButtonComponent | SwitchComponent;
 
 export interface UpdateTreeMsg {
   type: 'update_tree';
