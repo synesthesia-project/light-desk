@@ -1,10 +1,11 @@
-import {extend} from 'lodash';
+import { extend } from 'lodash';
 
-import {Parent} from './components/base';
-import {Group} from './components/group';
-import {IDMap} from './util/id-map';
+import { Parent } from './components/base';
+import { Group } from './components/group';
+import { IDMap } from './util/id-map';
 
 import * as proto from '../shared/proto';
+import * as color from './util/color';
 
 import {Connection, Server} from './server';
 
@@ -82,10 +83,12 @@ export class LightDesk implements Parent {
 }
 
 // Export components
-export {Component} from './components/base';
+export { Component } from './components/base';
 
-export {Button} from './components/button';
-export {Group} from './components/group';
-export {Label} from './components/label';
-export {SliderButton} from './components/slider_button';
-export {Switch} from './components/switch';
+export { Button } from './components/button';
+export { Group } from './components/group';
+export { Label } from './components/label';
+export { Rect } from './components/rect';
+export { SliderButton } from './components/slider_button';
+export { Switch } from './components/switch';
+export { color };

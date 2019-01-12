@@ -2,10 +2,11 @@ import * as React from 'react';
 
 import * as proto from '../../shared/proto';
 
-import {Button} from './button';
-import {Label} from './label';
-import {SliderButton} from './slider_button';
-import {Switch} from './switch';
+import { Button } from './button';
+import { Label } from './label';
+import { Rect } from './rect';
+import { SliderButton } from './slider_button';
+import { Switch } from './switch';
 
 import {styled} from './styling';
 
@@ -50,15 +51,17 @@ class Group extends React.Component<Props, {}> {
   private childComponent(info: proto.Component): JSX.Element {
     switch (info.component) {
       case 'button':
-      return <Button key={info.key} info={info} sendMessage={this.props.sendMessage} />;
+        return <Button key={info.key} info={info} sendMessage={this.props.sendMessage} />;
       case 'group':
-      return <StyledGroup key={info.key} info={info} sendMessage={this.props.sendMessage} color={nextColor(this.props)} />;
+        return <StyledGroup key={info.key} info={info} sendMessage={this.props.sendMessage} color={nextColor(this.props)} />;
       case 'label':
-      return <Label key={info.key} info={info} />;
+        return <Label key={info.key} info={info} />;
+      case 'rect':
+        return <Rect key={info.key} info={info} />;
       case 'slider_button':
-      return <SliderButton key={info.key} info={info} sendMessage={this.props.sendMessage} />;
+        return <SliderButton key={info.key} info={info} sendMessage={this.props.sendMessage} />;
       case 'switch':
-      return <Switch key={info.key} info={info} sendMessage={this.props.sendMessage} />;
+        return <Switch key={info.key} info={info} sendMessage={this.props.sendMessage} />;
     }
   }
 }

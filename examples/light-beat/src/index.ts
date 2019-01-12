@@ -44,7 +44,7 @@ const intervalControl = new lightDesk.SliderButton(intervalFrames, 1, 100, 1);
 group.addChild(intervalControl);
 intervalControl.addListener(value => intervalFrames = value);
 
-const brightnessDisplay = new lightDesk.Label(`brightness: ${brightness}`);
+const brightnessDisplay = new lightDesk.Rect(lightDesk.color.COLOR_RGB_WHITE);
 group.addChild(brightnessDisplay);
 
 /** Calculate the next frame */
@@ -64,7 +64,7 @@ function nextFrame() {
         return;
     }
     // Update the light desk display
-    brightnessDisplay.setText(`brightness: ${brightness}`);
+    brightnessDisplay.setColor(lightDesk.color.COLOR_RGB_WHITE.dim(brightness));
 }
 
 // Start sequence
