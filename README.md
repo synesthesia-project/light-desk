@@ -42,7 +42,11 @@ build up the layout of desks.
 
 If you use typescript for your project, types for this module when you import should work automatically. There is no need to install a specific `@types/X` package etc... as they are included in the `@synesthesia-project/light-desk` package (`light-desk` is itself also written in TypeScript, and so the type declarations are generated automatically).
 
-## Hello World Example
+## Examples
+
+See the [examples](https://github.com/synesthesia-project/light-desk/tree/master/examples) directory for full examples.
+
+### [Hello World Example](examples/hello-world)
 
 ```js
 const lightDesk = require('@synesthesia-project/light-desk');
@@ -71,7 +75,15 @@ Starting light desk on port: 1337
 Light Desk Started: http://localhost:1337
 ```
 
-See the [examples](https://github.com/synesthesia-project/light-desk/tree/master/examples) directory for full examples.
+### [Light Beat Example](examples/light-beat)
+
+A basic example TypeScript project that uses `light-desk` to control a virtual "flashing light".
+It should be pretty simple to extend this project to actually control the brightness of a real
+light, e.g. some light strip controlled by a raspberry pi, or some DMX fixture.
+
+[![](../../docs/images/light-beat-screenshot.png)](examples/light-beat)
+
+A demo video of this example project in action can be found here: https://youtu.be/d5p26aAb-hQ
 
 ## Documentation
 
