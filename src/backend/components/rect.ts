@@ -1,5 +1,3 @@
-import {extend} from 'lodash';
-
 import * as proto from '../../shared/proto';
 import { Color, COLOR_RGB_WHITE} from '../util/color';
 import {IDMap} from '../util/id-map';
