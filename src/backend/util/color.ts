@@ -7,11 +7,12 @@
  *
  * ```ts
  * // Javascript:
- * const color = new require('@synesthesia-project/light-desk').color.RGBColor(255, 0, 0);
+ * const color = require('@synesthesia-project/light-desk').color;
+ * const c = new color.RGBColor(255, 0, 0);
  *
  * // TypeScript:
  * import {color} from '@synesthesia-project/light-desk';
- * const color = new color.RGBColor(255, 0, 0);
+ * const c = new color.RGBColor(255, 0, 0);
  * ```
  */
 

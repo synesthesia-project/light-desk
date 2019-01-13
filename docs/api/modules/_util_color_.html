@@ -74,11 +74,12 @@
 					<p>This module is exported from the main module, like components.</p>
 					<p><strong>Example:</strong></p>
 					<pre><code class="language-ts"><span class="hljs-comment">// Javascript:</span>
-<span class="hljs-keyword">const</span> color = <span class="hljs-keyword">new</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">'@synesthesia-project/light-desk'</span>).color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">const</span> color = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@synesthesia-project/light-desk'</span>).color;
+<span class="hljs-keyword">const</span> c = <span class="hljs-keyword">new</span> color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
 
 <span class="hljs-comment">// TypeScript:</span>
 <span class="hljs-keyword">import</span> {color} <span class="hljs-keyword">from</span> <span class="hljs-string">'@synesthesia-project/light-desk'</span>;
-<span class="hljs-keyword">const</span> color = <span class="hljs-keyword">new</span> color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);</code></pre>
+<span class="hljs-keyword">const</span> c = <span class="hljs-keyword">new</span> color.RGBColor(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -121,7 +122,7 @@
 					<div class="tsd-signature tsd-kind-icon">ColorJSON<span class="tsd-signature-symbol">:</span> <a href="_util_color_.html#rgbcolorjson" class="tsd-signature-type">RGBColorJSON</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L27">util/color.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L28">util/color.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -136,7 +137,7 @@
 					<div class="tsd-signature tsd-kind-icon">RGBColorJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L19">util/color.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L20">util/color.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -171,7 +172,7 @@
 					<div class="tsd-signature tsd-kind-icon">COLOR_<wbr>RGB_<wbr>WHITE<span class="tsd-signature-symbol">:</span> <a href="../classes/_util_color_.rgbcolor.html" class="tsd-signature-type">RGBColor</a><span class="tsd-signature-symbol"> =&nbsp;new RGBColor(255, 255, 255)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L121">util/color.ts:121</a></li>
+							<li>Defined in <a href="https://github.com/synesthesia-project/light-desk/blob/master/src/backend/util/color.ts#L122">util/color.ts:122</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
