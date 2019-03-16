@@ -17,7 +17,7 @@ steps:
 
 - script: |
     yarn install
-    gulp default
+    yarn run build
   displayName: 'yarn install and run gulp'
 
 - script: |
