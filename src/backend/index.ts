@@ -20,7 +20,7 @@ export const DEFAULT_LIGHT_DESK_OPTIONS: LightDeskOptions = {
 export class LightDesk implements Parent {
 
   private readonly server: Server;
-  private rootGroup: Group | null;
+  private rootGroup: Group | null = null;
   /**
    * Mapping from components to unique IDs that identify them
    */
@@ -70,7 +70,7 @@ export class LightDesk implements Parent {
     this.connections.delete(connection);
   }
 
-  private onMessage(connection: Connection, message: proto.ClientMessage) {
+  private onMessage(_connection: Connection, message: proto.ClientMessage) {
     console.log('got message', message);
     switch (message.type) {
       case 'component_message':

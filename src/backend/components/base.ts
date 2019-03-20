@@ -4,7 +4,7 @@ import {IDMap} from '../util/id-map';
 export abstract class Component {
 
   /** @hidden */
-  private parent: Parent | null;
+  private parent: Parent | null = null;
 
   /** @hidden */
   public setParent(parent: Parent) {
