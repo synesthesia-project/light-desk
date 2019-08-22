@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [8.x, 10.x, 11.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -23,7 +23,7 @@ jobs:
         yarn run build
     - name: check docs are up to date
       run: |
-        yarn run docs
+        yarn run build docs
         git status
         git diff
         bash -c 'if [ -n "$(git status --porcelain)" ]; then echo "Docs have changed but have not been regenerated"; exit 1; fi'
