@@ -53,6 +53,7 @@ export class Server {
           <html>
             <head>
               <title>Light Desk</title>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
             </head>
             <body>
               <div id="root"></div>
