@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var clean = require('gulp-clean');
 var typedoc = require("gulp-typedoc");
 var webpack = require('webpack');
-var PluginError = require('plugin-error');
 
 util.cleanTask(['build', '.tmp']);
 
@@ -31,29 +30,27 @@ util.typescriptTasks({
   tslintConfig: 'tslint.json'
 });
 
-gulp.task("frontend-webpack", function(callback) {
-    // run webpack
-    webpack({
-        entry: {
-          bundle: "./.tmp/frontend/main.js",
-        },
-        output: {
-            filename: "[name].js",
-            path: __dirname + "/build/frontend"
-        },
-
-        // Enable sourcemaps for debugging webpack's output.
-        devtool: "source-map",
-
-        module: {
-            preLoaders: [
-                { test: /\.js$/, loader: "source-map" }
-            ]
-        },
-    }, function(err, stats) {
-        if(err) throw new PluginError("webpack", err);
-        callback();
-    });
+util.webpackTask('frontend-webpack', {
+  entry: {
+    bundle: "./.tmp/frontend/main.js",
+  },
+  output: {
+    filename: "[name].js",
+    path: __dirname + "/build/frontend"
+  },
+  devtool: 'source-map',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+      }
+    ]
+  },
+  plugins: [
+    new webpack.IgnorePlugin({ resourceRegExp: /perf_hooks/ })
+  ]
 });
 
 gulp.task('backend-copy', function () {

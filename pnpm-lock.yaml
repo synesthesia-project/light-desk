@@ -20,7 +20,6 @@ specifiers:
   styled-components: ^5.3.3
   typedoc: ^0.22.10
   typescript: ^4.5.4
-  webpack: 1.14.0
   ws: 3.3.1
 
 dependencies:
@@ -46,7 +45,6 @@ devDependencies:
   styled-components: 5.3.3_281a4fa50a045c9112baf635f3bc27a7
   typedoc: 0.22.10_typescript@4.5.4
   typescript: 4.5.4
-  webpack: 1.14.0
 
 packages:
 
