@@ -11,7 +11,7 @@ specifiers:
   gulp-clean: ^0.3.2
   gulp-sourcemaps: 1.6.0
   gulp-tslint: ^8.1.3
-  gulp-typedoc: ^2.2.1
+  gulp-typedoc: ^3.0.2
   gulp-typescript: ^5.0.0
   gulp-webpack: 1.5.0
   lodash: ^4.17.11
@@ -22,7 +22,7 @@ specifiers:
   source-map-loader: 0.1.5
   styled-components: ^5.3.3
   tslint: ^5.9.1
-  typedoc: ^0.14.0
+  typedoc: ^0.22.10
   typescript: ^4.5.4
   webpack: 1.14.0
   ws: 3.3.1
@@ -42,7 +42,7 @@ devDependencies:
   gulp-clean: 0.3.2
   gulp-sourcemaps: 1.6.0
   gulp-tslint: 8.1.4_tslint@5.20.1
-  gulp-typedoc: 2.2.9_typedoc@0.14.2
+  gulp-typedoc: 3.0.2_typedoc@0.22.10
   gulp-typescript: 5.0.1_typescript@4.5.4
   gulp-webpack: 1.5.0
   react: 17.0.2
@@ -52,7 +52,7 @@ devDependencies:
   source-map-loader: 0.1.5
   styled-components: 5.3.3_281a4fa50a045c9112baf635f3bc27a7
   tslint: 5.20.1_typescript@4.5.4
-  typedoc: 0.14.2
+  typedoc: 0.22.10_typescript@4.5.4
   typescript: 4.5.4
   webpack: 1.14.0
 
@@ -219,30 +219,6 @@ packages:
     resolution: {integrity: sha512-mQjDxyOM1Cpocd+vm1kZBP7smwKZ4TNokFeds9LV7OZibmPJFEzY3+xZMrKfUdNT71lv8GoCPD6upKwHxubClw==}
     dev: true
 
-  /@types/fs-extra/5.1.0:
-    resolution: {integrity: sha512-AInn5+UBFIK9FK5xc9yP5e3TQSPNNgjHByqYcj9g5elVBnDQcQL7PlO1CIRy2gWlbwK7UPYqi7vRvFA44dCmYQ==}
-    dependencies:
-      '@types/node': 17.0.8
-    dev: true
-
-  /@types/glob/7.2.0:
-    resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
-    dependencies:
-      '@types/minimatch': 3.0.3
-      '@types/node': 17.0.8
-    dev: true
-
-  /@types/handlebars/4.1.0:
-    resolution: {integrity: sha512-gq9YweFKNNB1uFK71eRqsd4niVkXrxHugqWFQkeLRJvGjnxsLr16bYtcsG4tOFwmYi0Bax+wCkbf1reUfdl4kA==}
-    deprecated: This is a stub types definition. handlebars provides its own type definitions, so you do not need this installed.
-    dependencies:
-      handlebars: 4.7.7
-    dev: true
-
-  /@types/highlight.js/9.12.4:
-    resolution: {integrity: sha512-t2szdkwmg2JJyuCM20e8kR2X59WCE5Zkl4bzm1u1Oukjm79zpbiAv+QjnwLnuuV0WHEcX2NgUItu0pAMKuOPww==}
-    dev: true
-
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
@@ -252,14 +228,6 @@ packages:
 
   /@types/lodash/4.14.178:
     resolution: {integrity: sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==}
-    dev: true
-
-  /@types/marked/0.4.2:
-    resolution: {integrity: sha512-cDB930/7MbzaGF6U3IwSQp6XBru8xWajF5PV2YZZeV8DyiliTuld11afVztGI9+yJZ29il5E+NpGA6ooV/Cjkg==}
-    dev: true
-
-  /@types/minimatch/3.0.3:
-    resolution: {integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==}
     dev: true
 
   /@types/node/17.0.8:
@@ -286,13 +254,6 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: true
-
-  /@types/shelljs/0.8.10:
-    resolution: {integrity: sha512-nhBdUA/n0nRo1B6E4BuRnUvllYAqal4T9zd91ZDnBh+qQMQTwvxmJHx6xEn/0vdjP2kqEA5eVeLazs4nMxeuFg==}
-    dependencies:
-      '@types/glob': 7.2.0
-      '@types/node': 17.0.8
     dev: true
 
   /@types/styled-components/5.1.19:
@@ -1966,15 +1927,6 @@ packages:
       readable-stream: 2.3.7
     dev: true
 
-  /fs-extra/7.0.1:
-    resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
-    engines: {node: '>=6 <7 || >=8'}
-    dependencies:
-      graceful-fs: 4.2.9
-      jsonfile: 4.0.0
-      universalify: 0.1.2
-    dev: true
-
   /fs-mkdirp-stream/1.0.0:
     resolution: {integrity: sha1-C3gV/DIBxqaeFNuYzgmMFpNSWes=}
     engines: {node: '>= 0.10'}
@@ -2206,17 +2158,17 @@ packages:
       tslint: 5.20.1_typescript@4.5.4
     dev: true
 
-  /gulp-typedoc/2.2.9_typedoc@0.14.2:
-    resolution: {integrity: sha512-mrG2f8Ri5MUD1FxQx/V9eclxUwTtBzZPnEpO/It8kGKmQRzxTTdWwA7dgIGjApOGGTIE7pco6nSZNTdKoXx/RA==}
+  /gulp-typedoc/3.0.2_typedoc@0.22.10:
+    resolution: {integrity: sha512-f7TVA6/fmZMU1vAskeZbeqBRpHbkFiY49r8xQV8aFIJSoo/Vvw67Tsp9jfUlPAQPC/LYBn/dMg3WmROSbdzskw==}
     peerDependencies:
-      typedoc: '>=0.3.9'
+      typedoc: '>=0.20.34'
     dependencies:
       ansi-colors: 4.1.1
       event-stream: 4.0.1
       fancy-log: 1.3.3
       plugin-error: 1.0.1
       semver: 7.3.5
-      typedoc: 0.14.2
+      typedoc: 0.22.10_typescript@4.5.4
     dev: true
 
   /gulp-typescript/5.0.1_typescript@3.7.7:
@@ -2319,19 +2271,6 @@ packages:
       glogg: 1.0.2
     dev: true
 
-  /handlebars/4.7.7:
-    resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==}
-    engines: {node: '>=0.4.7'}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.5
-      neo-async: 2.6.2
-      source-map: 0.6.1
-      wordwrap: 1.0.0
-    optionalDependencies:
-      uglify-js: 3.14.5
-    dev: true
-
   /has-ansi/0.1.0:
     resolution: {integrity: sha1-hPJlqujA5qiKEtcCKJS3VoiUxi4=}
     engines: {node: '>=0.10.0'}
@@ -2421,12 +2360,6 @@ packages:
     dependencies:
       inherits: 2.0.4
       minimalistic-assert: 1.0.1
-    dev: true
-
-  /highlight.js/9.18.5:
-    resolution: {integrity: sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==}
-    deprecated: Support has ended for 9.x series. Upgrade to @latest
-    requiresBuild: true
     dev: true
 
   /hmac-drbg/1.0.1:
@@ -2828,10 +2761,8 @@ packages:
       minimist: 1.2.5
     dev: true
 
-  /jsonfile/4.0.0:
-    resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
-    optionalDependencies:
-      graceful-fs: 4.2.9
+  /jsonc-parser/3.0.0:
+    resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==}
     dev: true
 
   /just-debounce/1.1.0:
@@ -3164,6 +3095,10 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /lunr/2.3.9:
+    resolution: {integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==}
+    dev: true
+
   /make-dir/2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
     engines: {node: '>=6'}
@@ -3204,9 +3139,9 @@ packages:
       object-visit: 1.0.1
     dev: true
 
-  /marked/0.4.0:
-    resolution: {integrity: sha512-tMsdNBgOsrUophCAFQl0XPe6Zqk/uy9gnue+jIIKhykO51hxyu6uNx7zBPy0+y/WKYVZZMspV9YeXLNdKk+iYw==}
-    engines: {node: '>=0.10.0'}
+  /marked/3.0.8:
+    resolution: {integrity: sha512-0gVrAjo5m0VZSJb4rpL59K1unJAMb/hm8HRXqasD8VeC8m91ytDPMritgFSlKonfdt+rRYYpP/JfLxgIX8yoSw==}
+    engines: {node: '>= 12'}
     hasBin: true
     dev: true
 
@@ -3881,11 +3816,6 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: true
 
-  /progress/2.0.3:
-    resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
-    engines: {node: '>=0.4.0'}
-    dev: true
-
   /promise-inflight/1.0.1:
     resolution: {integrity: sha1-mEcocL8igTL8vdhoEputEsPAKeM=}
     dev: true
@@ -4336,14 +4266,12 @@ packages:
     resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==}
     dev: true
 
-  /shelljs/0.8.5:
-    resolution: {integrity: sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==}
-    engines: {node: '>=4'}
-    hasBin: true
+  /shiki/0.9.15:
+    resolution: {integrity: sha512-/Y0z9IzhJ8nD9nbceORCqu6NgT9X6I8Fk8c3SICHI5NbZRLdZYFaB233gwct9sU0vvSypyaL/qaKvzyQGJBZSw==}
     dependencies:
-      glob: 7.2.0
-      interpret: 1.4.0
-      rechoir: 0.6.2
+      jsonc-parser: 3.0.0
+      vscode-oniguruma: 1.6.1
+      vscode-textmate: 5.2.0
     dev: true
 
   /signal-exit/3.0.6:
@@ -4897,39 +4825,19 @@ packages:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: true
 
-  /typedoc-default-themes/0.5.0:
-    resolution: {integrity: sha1-bcJDPnjti+qOiHo6zeLzF4W9Yic=}
-    engines: {node: '>= 4'}
-    dev: true
-
-  /typedoc/0.14.2:
-    resolution: {integrity: sha512-aEbgJXV8/KqaVhcedT7xG6d2r+mOvB5ep3eIz1KuB5sc4fDYXcepEEMdU7XSqLFO5hVPu0nllHi1QxX2h/QlpQ==}
-    engines: {node: '>= 6.0.0'}
+  /typedoc/0.22.10_typescript@4.5.4:
+    resolution: {integrity: sha512-hQYZ4WtoMZ61wDC6w10kxA42+jclWngdmztNZsDvIz7BMJg7F2xnT+uYsUa7OluyKossdFj9E9Ye4QOZKTy8SA==}
+    engines: {node: '>= 12.10.0'}
     hasBin: true
+    peerDependencies:
+      typescript: 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x || 4.5.x
     dependencies:
-      '@types/fs-extra': 5.1.0
-      '@types/handlebars': 4.1.0
-      '@types/highlight.js': 9.12.4
-      '@types/lodash': 4.14.178
-      '@types/marked': 0.4.2
-      '@types/minimatch': 3.0.3
-      '@types/shelljs': 0.8.10
-      fs-extra: 7.0.1
-      handlebars: 4.7.7
-      highlight.js: 9.18.5
-      lodash: 4.17.21
-      marked: 0.4.0
+      glob: 7.2.0
+      lunr: 2.3.9
+      marked: 3.0.8
       minimatch: 3.0.4
-      progress: 2.0.3
-      shelljs: 0.8.5
-      typedoc-default-themes: 0.5.0
-      typescript: 3.2.4
-    dev: true
-
-  /typescript/3.2.4:
-    resolution: {integrity: sha512-0RNDbSdEokBeEAkgNbxJ+BLwSManFy9TeXz8uW+48j/xhEXv1ePME60olyzw2XzUqUBNAYFeJadIqAgNqIACwg==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
+      shiki: 0.9.15
+      typescript: 4.5.4
     dev: true
 
   /typescript/3.7.7:
@@ -4954,14 +4862,6 @@ packages:
       uglify-to-browserify: 1.0.2
       yargs: 3.10.0
     dev: true
-
-  /uglify-js/3.14.5:
-    resolution: {integrity: sha512-qZukoSxOG0urUTvjc2ERMTcAy+BiFh3weWAkeurLwjrCba73poHmG3E36XEjd/JGukMzwTL7uCxZiAexj8ppvQ==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /uglify-to-browserify/1.0.2:
     resolution: {integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=}
@@ -5024,11 +4924,6 @@ packages:
     dependencies:
       json-stable-stringify-without-jsonify: 1.0.1
       through2-filter: 3.0.0
-    dev: true
-
-  /universalify/0.1.2:
-    resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
-    engines: {node: '>= 4.0.0'}
     dev: true
 
   /unset-value/1.0.0:
@@ -5191,6 +5086,14 @@ packages:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
 
+  /vscode-oniguruma/1.6.1:
+    resolution: {integrity: sha512-vc4WhSIaVpgJ0jJIejjYxPvURJavX6QG41vu0mGhqywMkQqulezEqEQ3cO3gc8GvcOpX6ycmKGqRoROEMBNXTQ==}
+    dev: true
+
+  /vscode-textmate/5.2.0:
+    resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
+    dev: true
+
   /watchpack-chokidar2/2.0.1:
     resolution: {integrity: sha512-nCFfBIPKr5Sh61s4LPpy1Wtfi0HE8isJ3d2Yb5/Ppw2P2B/3eVSEBjKfN0fmHJSK14+31KwMKmcrzs2GM4P0Ww==}
     requiresBuild: true
@@ -5308,10 +5211,6 @@ packages:
   /wordwrap/0.0.3:
     resolution: {integrity: sha1-o9XabNXAvAAI03I0u68b7WMFkQc=}
     engines: {node: '>=0.4.0'}
-    dev: true
-
-  /wordwrap/1.0.0:
-    resolution: {integrity: sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=}
     dev: true
 
   /worker-farm/1.7.0:
