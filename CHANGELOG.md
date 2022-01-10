@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2022-01-10
+
+- Updated dependencies and build configuration
+- Modified the way server is started, allowing it to be added to existing
+  express / http server (this is a breaking change)
+- Added automatic reconnect to desk when websocket is closed and user tries to
+  change something
+
 ## [1.1.0] - 2019-01-12
 
 ### Added
