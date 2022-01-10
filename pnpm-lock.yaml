@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@synesthesia-project/gulp-util': ^0.0.1
+  '@synesthesia-project/gulp-util': ^0.0.2
   '@types/lodash': ^4.14.118
   '@types/react': ^16.0.38
   '@types/react-dom': ^16.0.4
@@ -32,7 +32,7 @@ dependencies:
   ws: 3.3.1
 
 devDependencies:
-  '@synesthesia-project/gulp-util': 0.0.1_gulp@4.0.2
+  '@synesthesia-project/gulp-util': 0.0.2_gulp@4.0.2
   '@types/lodash': 4.14.178
   '@types/react': 16.14.21
   '@types/react-dom': 16.9.14
@@ -198,8 +198,8 @@ packages:
     resolution: {integrity: sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==}
     dev: true
 
-  /@synesthesia-project/gulp-util/0.0.1_gulp@4.0.2:
-    resolution: {integrity: sha512-l6w6NHYBL+t6ijIkRqRAZjcNNCiAV1UE4xllItgAxEf/FmRcFgQn4L3qy3nr6GuTOSw+z162FK77J7JHZfzA2A==}
+  /@synesthesia-project/gulp-util/0.0.2_gulp@4.0.2:
+    resolution: {integrity: sha512-9XKdAqZ2B0ZQeQ4r2g79oE/CSWFtDeDn+CroBxQjEN4I8zGegRHfst0kq4PpG59+J64fbhXFzfXaWG4LVPQBVg==}
     peerDependencies:
       gulp: ~4.0.2
     dependencies:
