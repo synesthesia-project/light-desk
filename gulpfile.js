@@ -11,7 +11,8 @@ util.typescriptTasks({
   tsconfig: 'src/frontend/tsconfig.json',
   outputDir: '.tmp/frontend/',
   tslintSrc: ['src/frontend/**/*.ts', 'src/frontend/**/*.tsx'],
-  tslintConfig: 'tslint.json'
+  tslintConfig: 'tslint.json',
+  sourcemap: true,
 });
 
 util.typescriptTasks({
@@ -19,7 +20,8 @@ util.typescriptTasks({
   tsconfig: 'src/backend/tsconfig.json',
   outputDir: '.tmp/backend/',
   tslintSrc: ['src/backend/**/*.ts'],
-  tslintConfig: 'tslint.json'
+  tslintConfig: 'tslint.json',
+  sourcemap: true,
 });
 
 util.typescriptTasks({
@@ -27,7 +29,8 @@ util.typescriptTasks({
   tsconfig: 'src/shared/tsconfig.json',
   outputDir: '.tmp/shared/',
   tslintSrc: ['src/shared/**/*.ts'],
-  tslintConfig: 'tslint.json'
+  tslintConfig: 'tslint.json',
+  sourcemap: true,
 });
 
 util.webpackTask('frontend-webpack', {
