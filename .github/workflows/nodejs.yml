@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 11.x]
+        node-version: [12.x, 14.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -17,13 +17,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install and build
+    - name: install pnpm
+      run: yarn global add pnpm
+    - name: pnpm install and build
       run: |
-        yarn install
-        yarn run build
+        pnpm install
+        pnpm run build
     - name: check docs are up to date
       run: |
-        yarn run build docs
+        pnpm run build docs
         git status
         git diff
         bash -c 'if [ -n "$(git status --porcelain)" ]; then echo "Docs have changed but have not been regenerated"; exit 1; fi'
