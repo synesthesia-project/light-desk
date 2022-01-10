@@ -58,5 +58,8 @@
     "@types/express": {
       "optional": true
     }
-  }
+  },
+  "files": [
+    "build/**/*"
+  ]
 }
