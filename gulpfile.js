@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var clean = require('gulp-clean');
 var typedoc = require("gulp-typedoc");
 var webpack = require('webpack');
+var PluginError = require('plugin-error');
 
 util.cleanTask(['build', '.tmp']);
 
@@ -50,7 +51,7 @@ gulp.task("frontend-webpack", function(callback) {
             ]
         },
     }, function(err, stats) {
-        if(err) throw new gutil.PluginError("webpack", err);
+        if(err) throw new PluginError("webpack", err);
         callback();
     });
 });
