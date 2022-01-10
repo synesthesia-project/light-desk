@@ -1,4 +1,7 @@
 import { extend } from 'lodash';
+import * as http from 'http';
+import * as WebSocket from 'ws';
+import {Application} from 'express';
 
 import { Parent } from './components/base';
 import { Group } from './components/group';
@@ -8,18 +11,21 @@ import * as proto from '../shared/proto';
 import * as color from './util/color';
 
 import {Connection, Server} from './server';
+import { LightDeskOptions } from './options';
 
-export interface LightDeskOptions {
-  port: number;
+const DEFAULT_LIGHT_DESK_OPTIONS: LightDeskOptions = {
+  path: '/'
 }
 
-export const DEFAULT_LIGHT_DESK_OPTIONS: LightDeskOptions = {
-  port: 1337
-};
+export type InitializationOptions =
+  /** automatically start a simple  */
+  | { mode: 'automatic', port: number }
+  /** Create a websocket server that attaches to an existing express and http server */
+  | { mode: 'express', express: Application, server: http.Server }
 
 export class LightDesk implements Parent {
 
-  private readonly server: Server;
+  private readonly options: LightDeskOptions;
   private rootGroup: Group | null = null;
   /**
    * Mapping from components to unique IDs that identify them
@@ -28,17 +34,43 @@ export class LightDesk implements Parent {
   private readonly connections = new Set<Connection>();
 
   constructor(options: Partial<LightDeskOptions> = {}) {
-    const fullOptions = extend({}, DEFAULT_LIGHT_DESK_OPTIONS, options);
-    console.log('Starting light desk on port:', fullOptions.port);
-    this.server = new Server(
-      fullOptions.port,
-      this.onNewConnection.bind(this),
-      this.onClosedConnection.bind(this),
-      this.onMessage.bind(this));
-    this.server.start();
+    this.options = extend({}, DEFAULT_LIGHT_DESK_OPTIONS, options);
+    if (!this.options.path.endsWith('/') || !this.options.path.startsWith('/')) {
+      throw new Error(`path must start and end with "/", set to: ${this.options.path}`);
+    }
   }
 
-  public setRoot(group: Group) {
+  public start = (opts: InitializationOptions) => {
+    const server = new Server(
+      this.options,
+      this.onNewConnection,
+      this.onClosedConnection,
+      this.onMessage
+    );
+    if (opts.mode === 'automatic') {
+      const httpServer = http.createServer(server.handleHttpRequest);
+      const wss = new WebSocket.Server({
+        server: httpServer
+      });
+      wss.on('connection', server.handleWsConnection);
+
+      httpServer.listen(opts.port, () => {
+        console.log(`Light Desk Started: http://localhost:${opts.port}${this.options.path}`);
+      });
+    } else if (opts.mode === 'express') {
+      const wss = new WebSocket.Server({
+        server: opts.server
+      });
+      wss.on('connection', server.handleWsConnection);
+      opts.express.get(`${this.options.path}*`, server.handleHttpRequest);
+    } else {
+      // @ts-ignore
+      const _n: never = opts;
+      throw new Error(`Unsupported mode`);
+    }
+  }
+
+  public setRoot = (group: Group) => {
     if (this.rootGroup) {
       // TODO
       throw new Error('Can only set root group once');
@@ -47,7 +79,7 @@ export class LightDesk implements Parent {
     this.rootGroup.setParent(this);
   }
 
-  public updateTree() {
+  public updateTree = () => {
     if (!this.rootGroup) return;
     const root = this.rootGroup.getProtoInfo(this.componentIDMap);
     for (const connection of this.connections) {
@@ -55,7 +87,7 @@ export class LightDesk implements Parent {
     }
   }
 
-  private onNewConnection(connection: Connection) {
+  private onNewConnection = (connection: Connection) => {
     this.connections.add(connection);
     if (this.rootGroup) {
       connection.sendMessage({
@@ -65,12 +97,12 @@ export class LightDesk implements Parent {
     }
   }
 
-  private onClosedConnection(connection: Connection) {
+  private onClosedConnection = (connection: Connection) => {
     console.log('removing connection');
     this.connections.delete(connection);
   }
 
-  private onMessage(_connection: Connection, message: proto.ClientMessage) {
+  private onMessage = (_connection: Connection, message: proto.ClientMessage) => {
     console.log('got message', message);
     switch (message.type) {
       case 'component_message':

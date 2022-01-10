@@ -1,5 +1,9 @@
 import {AudioFile, AUDIO_FILES} from '../../shared/static';
 
+/**
+ * The root URL used for this light desk
+ */
+const ROOT_URL = window.location.pathname;
 
 /**
  * A fixed-number collection of Audio elements for a single sound file, to allow for multi-playback of a single sound file
@@ -13,7 +17,7 @@ class AudioPool {
   constructor(sample: AudioFile) {
     this.startTime = sample.startTime;
     for (let i = 0; i < sample.poolSize; i++) {
-      const audio = new Audio('/audio/' + sample.file);
+      const audio = new Audio(`${ROOT_URL}audio/${sample.file}`);
       audio.volume = sample.volume;
       this.pool.push(audio);
     }
