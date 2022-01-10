@@ -50,6 +50,11 @@ const lightDesk = require('@synesthesia-project/light-desk');
 const desk = new lightDesk.LightDesk();
 const group = new lightDesk.Group();
 desk.setRoot(group);
+
+desk.desk.start({
+  mode: 'automatic',
+  port: 1337
+});
 ```
 
 ### Usage with Typescript
