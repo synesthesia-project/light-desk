@@ -1,34 +1,6 @@
-import * as styledComponents from 'styled-components';
+import { DefaultTheme, createGlobalStyle, css } from 'styled-components';
 
-const {
-  default: styled,
-  css,
-  injectGlobal,
-  keyframes,
-  ThemeProvider
-} = styledComponents as styledComponents.ThemedStyledComponentsModule<ThemeVariables>;
-
-export interface ThemeVariables {
-  // Colors
-  colorGreen: string;
-  colorRed: string;
-  colorAmber: string;
-  bgDark1: string;
-  bg: string;
-  bgLight1: string;
-  borderDark: string;
-  borderLight: string;
-  borderLighter: string;
-  borderLighterer: string;
-  hint: string;
-  hintRGB: string;
-  hintDark1: string;
-  textNormal: string;
-  // Sizing
-  spacingPx: number;
-}
-
-export const defaultTheme: ThemeVariables = {
+export const defaultTheme: DefaultTheme = {
   colorGreen: '#98c379',
   colorRed: '#e06c75',
   colorAmber: '#d19a66',
@@ -46,8 +18,7 @@ export const defaultTheme: ThemeVariables = {
   spacingPx: 15
 };
 
-// tslint:disable-next-line: no-unused-expression
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
 }
@@ -64,8 +35,6 @@ body {
   }
 }
 `;
-
-export { styled, css, injectGlobal, keyframes, ThemeProvider };
 
 
 export const buttonStateNormal = css`

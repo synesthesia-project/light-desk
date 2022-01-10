@@ -1,8 +1,9 @@
 import * as React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 
 import * as proto from '../../shared/proto';
 
-import {ThemeProvider, defaultTheme, styled} from './styling';
+import {defaultTheme, GlobalStyle } from './styling';
 import {Group} from './group';
 
 interface Props {
@@ -64,8 +65,11 @@ const StyledStage = styled(Stage)`
 
 export function rootComponent() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <StyledStage />
-    </ThemeProvider>
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={defaultTheme}>
+        <StyledStage />
+      </ThemeProvider>
+    </>
   );
 }

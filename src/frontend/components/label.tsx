@@ -1,7 +1,7 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import * as proto from '../../shared/proto';
-import {styled} from './styling';
 
 interface Props {
   className?: string;

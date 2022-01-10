@@ -1,9 +1,10 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import * as proto from '../../shared/proto';
 import {play} from '../audio';
 
-import {styled, touchIndicatorNormal, touchIndicatorTouching} from './styling';
+import {touchIndicatorNormal, touchIndicatorTouching} from './styling';
 
 const CLASS_TOUCHING = 'touching';
 const TOUCH_INDICATOR_CLASS = 'touch-indicator';
