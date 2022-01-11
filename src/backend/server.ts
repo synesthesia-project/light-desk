@@ -1,5 +1,5 @@
 import * as http from 'http';
-import * as WebSocket from 'ws';
+import WebSocket = require('ws');
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -85,13 +85,13 @@ export class Server {
     });
   }
 
-  public handleWsConnection = (ws: WebSocket) => {
+  public handleWsConnection = <S extends WebSocket>(ws: S) => {
     const connection: Connection = {
       sendMessage: msg => ws.send(JSON.stringify(msg))
     };
     this.onNewConnection(connection);
     console.log('new connection');
-    ws.on('message', msg => this.onMessage(connection, JSON.parse(msg)));
+    ws.on('message', msg => this.onMessage(connection, JSON.parse(msg.toString())));
     ws.on('close', () => this.onClosedConnection(connection));
   }
 
