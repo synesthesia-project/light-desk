@@ -22,6 +22,8 @@ export type InitializationOptions =
   | { mode: 'automatic', port: number }
   /** Create a websocket server that attaches to an existing express and http server */
   | { mode: 'express', express: Application, server: http.Server }
+  /** Create a websocket server that attaches to an existing express and http server */
+  | { mode: 'manual', setup: (server: Server) => void }
 
 export class LightDesk implements Parent {
 
@@ -63,6 +65,8 @@ export class LightDesk implements Parent {
       });
       wss.on('connection', server.handleWsConnection);
       opts.express.get(`${this.options.path}*`, server.handleHttpRequest);
+    } else if (opts.mode === 'manual') {
+      opts.setup(server);
     } else {
       // @ts-ignore
       const _n: never = opts;
