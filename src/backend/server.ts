@@ -1,10 +1,11 @@
 import * as http from 'http';
+import * as WebSocket from 'ws';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as WebSocket from 'ws';
 
 import * as proto from '../shared/proto';
 import {AudioFile, AUDIO_FILES} from '../shared/static';
+import { LightDeskOptions } from './options';
 
 const STATIC_DIR = path.resolve(__dirname, '../frontend');
 
@@ -29,27 +30,16 @@ export interface Connection {
 
 export class Server {
 
-  private readonly port: number;
-  private readonly onNewConnection: (connection: Connection) => void;
-  private readonly onClosedConnection: (connection: Connection) => void;
-  private readonly onMessage: (connection: Connection, message: proto.ClientMessage) => void;
-  private readonly server: http.Server;
-  private readonly wss: WebSocket.Server;
-
   public constructor(
-      port: number,
-      onNewConnection: (connection: Connection) => void,
-      onClosedConnection: (connection: Connection) => void,
-      onMessage: (connection: Connection, message: proto.ClientMessage) => void
-  ) {
-    this.port = port;
-    this.onNewConnection = onNewConnection;
-    this.onClosedConnection = onClosedConnection;
-    this.onMessage = onMessage;
+    private readonly options: LightDeskOptions,
+    private readonly onNewConnection: (connection: Connection) => void,
+    private readonly onClosedConnection: (connection: Connection) => void,
+    private readonly onMessage: (connection: Connection, message: proto.ClientMessage) => void
+  ){};
 
-    this.server = http.createServer((request, response) => {
-      if (request.url === '/') {
-        const content = `
+  public handleHttpRequest = (req: http.IncomingMessage, res: http.ServerResponse) => {
+    if (req.url === this.options.path) {
+      const content = `
           <html>
             <head>
               <title>Light Desk</title>
@@ -57,39 +47,27 @@ export class Server {
             </head>
             <body>
               <div id="root"></div>
-              <script type="text/javascript" src="/bundle.js"></script>
+              <script type="text/javascript" src="${this.options.path}bundle.js"></script>
             </body>
           </html>`;
-        response.writeHead(200, { 'Content-Type': 'text/html' });
-        response.end(content, 'utf-8');
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(content, 'utf-8');
+      return;
+    }
+    if (req.url && req.url.startsWith(this.options.path)) {
+      const relativePath = req.url.substr(this.options.path.length - 1);
+      const f = STATIC_FILES[relativePath];
+      if (f) {
+        this.sendStaticFile(path.join(STATIC_DIR, f[0]), res, f[1]);
         return;
       }
-      if (request.url && request.url.startsWith('/')) {
-        const f = STATIC_FILES[request.url];
-        if (f) {
-          this.sendStaticFile(path.join(STATIC_DIR, f[0]), response, f[1]);
-          return;
-        }
-      }
+    }
 
-      response.writeHead(404, { 'Content-Type': 'text/plain' });
-      response.end('not found', 'utf-8');
-    });
-
-    this.wss = new WebSocket.Server({
-      server: this.server
-    });
-
-    this.wss.on('connection', this.handleConnection.bind(this));
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('not found', 'utf-8');
   }
 
-  public start() {
-    this.server.listen(this.port, () => {
-      console.log('Light Desk Started: http://localhost:' + this.port);
-    });
-  }
-
-  private sendStaticFile(file: string, response: http.ServerResponse, contentType: string) {
+  private sendStaticFile = (file: string, response: http.ServerResponse, contentType: string) => {
     fs.readFile(file, function(error, content) {
       if (error) {
         if (error.code === 'ENOENT') {
@@ -107,7 +85,7 @@ export class Server {
     });
   }
 
-  private handleConnection(ws: WebSocket) {
+  public handleWsConnection = (ws: WebSocket) => {
     const connection: Connection = {
       sendMessage: msg => ws.send(JSON.stringify(msg))
     };

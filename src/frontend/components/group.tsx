@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import * as proto from '../../shared/proto';
 
@@ -7,8 +8,6 @@ import { Label } from './label';
 import { Rect } from './rect';
 import { SliderButton } from './slider_button';
 import { Switch } from './switch';
-
-import {styled} from './styling';
 
 type GroupColor = 'dark' | 'lighter' | 'lighterer';
 

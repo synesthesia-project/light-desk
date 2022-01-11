@@ -1,8 +1,9 @@
 import * as React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 
 import * as proto from '../../shared/proto';
 
-import {ThemeProvider, defaultTheme, styled} from './styling';
+import {defaultTheme, GlobalStyle } from './styling';
 import {Group} from './group';
 
 interface Props {
@@ -16,6 +17,8 @@ interface State {
 
 class Stage extends React.Component<Props, State> {
 
+  private socket: Promise<WebSocket> | null = null;
+
   public constructor(props: Props) {
     super(props);
     this.state = {
@@ -25,13 +28,37 @@ class Stage extends React.Component<Props, State> {
   }
 
   public componentDidMount() {
-    console.log('mounted, opening socket');
-    const socket = new WebSocket(`ws://${window.location.hostname}:${window.location.port}`);
+    console.log('mounted');
+    this.initializeWebsocket();
+    this.setState({ sendMessage: this.sendMessage });
+  }
+
+  private initializeWebsocket = async () => {
+    console.log('initializing websocket');
+    const socket =
+      new WebSocket(`ws://${window.location.hostname}:${window.location.port}${window.location.pathname}`);
     socket.onmessage = event => {
       console.log('message', event.data);
       this.handleMessage(JSON.parse(event.data));
     };
-    this.setState({sendMessage: msg => socket.send(JSON.stringify(msg))});
+    socket.onclose = () => {
+      console.log('socket closed');
+      this.socket = null;
+    }
+    this.socket = new Promise<WebSocket>((resolve, reject) => {
+      socket.onopen = () => {
+        resolve(socket);
+      }
+      socket.onerror = (err) => {
+        reject(err);
+        this.socket = null;
+      }
+    });
+    return socket;
+  }
+
+  private sendMessage = async (msg: proto.ClientMessage) => {
+    (await (this.socket || this.initializeWebsocket())).send(JSON.stringify(msg))
   }
 
   private handleMessage(msg: proto.ServerMessage) {
@@ -64,8 +91,11 @@ const StyledStage = styled(Stage)`
 
 export function rootComponent() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <StyledStage />
-    </ThemeProvider>
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={defaultTheme}>
+        <StyledStage />
+      </ThemeProvider>
+    </>
   );
 }

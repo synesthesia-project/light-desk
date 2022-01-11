@@ -17,7 +17,7 @@ export function trackMouseDown(move: (pos: {pageX: number, pageY: number}) => vo
 }
 
 export function trackTouch(
-  touch: Touch,
+  touch: React.Touch,
   move: (pos: {pageX: number, pageY: number}) => void,
   end: (pos: {pageX: number, pageY: number}) => void
     ) {

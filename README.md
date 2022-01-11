@@ -61,10 +61,17 @@ const desk = new lightDesk.LightDesk();
 const group = new lightDesk.Group();
 desk.setRoot(group);
 
+// Start the desk
+desk.desk.start({
+  mode: 'automatic',
+  port: 1337
+});
+
 // Create a button that calls buttonPressed(),
 const button = new lightDesk.Button("Hello World");
 group.addChild(button);
 button.addListener(buttonPressed);
+
 ```
 
 Upon running this code, a URL will be printed to stdout which can be visited from a web browser to view the control panel, e.g:

@@ -1,10 +1,11 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import * as proto from '../../shared/proto';
 import * as util from '../util/util';
 import {play} from '../audio';
 
-import {styled, buttonStateNormal, buttonStateNormalHover} from './styling';
+import {buttonStateNormal, buttonStateNormalHover} from './styling';
 
 const CLASS_STATE_OPEN = 'open';
 const CLASS_SLIDER_DISPLAY = 'slider-display';
